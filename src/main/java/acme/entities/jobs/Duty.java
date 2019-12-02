@@ -9,25 +9,29 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Range;
 
+import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Duty {
+public class Duty extends DomainEntity {
+
+	private static final long	serialVersionUID	= 1L;
 
 	@NotBlank
-	private String		title;
+	private String				title;
 
 	@NotBlank
-	private String		description;
+	private String				description;
 
 	@Range(min = 0, max = 100)
-	private Double		percentage;
+	private Double				percentage;
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Descriptor	descriptor;
+	private Descriptor			descriptor;
+
 }

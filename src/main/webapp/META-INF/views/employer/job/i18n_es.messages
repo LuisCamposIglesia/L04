@@ -13,11 +13,16 @@ employer.job.form.label.deadline= Fecha limite:
 employer.job.form.label.reference=Referencia:
 employer.job.form.label.salary= Salario:
 employer.job.form.label.moreInfo= Más Información:
-employer.job.form.label.description= Descripción:
+employer.job.form.label.finalMode= Modo Final:
+employer.job.form.label.status= Estado:
+
 employer.job.form.button.return= Volver
 
 
 employer.job.list.label.reference= Referencia
 employer.job.list.label.deadline= Fecha Limite
 employer.job.list.label.title= Titulo
-
+employer.job.list.label.salary= Salario:
+employer.job.list.label.moreInfo= Más Información:
+employer.job.list.label.finalMode= Modo Final:
+employer.job.list.label.status= Estado:

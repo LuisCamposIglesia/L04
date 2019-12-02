@@ -18,7 +18,7 @@
 
 <tiles-definitions>
 
-	<definition name="/employer/job/list-mine" extends="master">
+	<definition name="/employer/job/list" extends="master">
 		<put-attribute name="body" type="template" value="../employer/job/list.jsp" />
 	</definition>
 	
