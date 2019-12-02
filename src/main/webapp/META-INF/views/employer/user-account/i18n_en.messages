@@ -1,0 +1,26 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+employer.user-account.form.title.create = Sign up
+
+employer.user-account.label.username = Username:
+employer.user-account.label.password = Password:
+employer.user-account.label.confirmation = Confirmation:
+employer.user-account.label.name = Name:
+employer.user-account.label.surname = Surname:
+employer.user-account.label.email = Email:
+employer.user-account.label.accept = I do accept the license
+
+employer.user-account.button.create = Sign up
+employer.user-account.button.return = Return
+
+employer.user-account.error.duplicated = This name is already taken
+employer.user-account.error.must-accept = Must accept the license
+employer.user-account.error.confirmation-no-match = Confirmation doesn't match
