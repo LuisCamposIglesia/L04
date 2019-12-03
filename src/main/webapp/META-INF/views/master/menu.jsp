@@ -60,6 +60,10 @@
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')"> 
 			<acme:menu-suboption code="master.menu.consumer.offer.create" action="/authenticated/offer/create" />
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.worker" access="hasRole('Worker')"> 
+			<acme:menu-suboption code="master.menu.worker.applications.list" action="/worker/application/list-mine" />
+		</acme:menu-option>
 
 	</acme:menu-left>
 
@@ -89,6 +93,7 @@
 			<acme:menu-suboption code="master.menu.consumer.offer" action="/authenticated/offer/list" />
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.consumer.challenges" action="/authenticated/challenges/list" />
+			
 			
 		</acme:menu-option>
 
