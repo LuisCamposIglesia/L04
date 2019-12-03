@@ -53,6 +53,8 @@ public class Job extends DomainEntity {
 	@NotNull
 	private Status				status;
 
+	//	private boolean				active;
+
 	//Relationships -------------------------------------------------------------------
 
 	@NotNull
