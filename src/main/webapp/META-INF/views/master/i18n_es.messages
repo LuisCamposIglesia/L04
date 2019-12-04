@@ -73,10 +73,17 @@ master.menu.consumer.offer = Listar Ofertas
 master.menu.consumer.challenges= Listar Desafios
 master.menu.consumer.offer.create = Crear Oferta
 
+
+# master.menu.worker ##########################################################
+
+master.menu.worker = Trabajador
+master.menu.worker.applications.list = Listar Aplicaciones
+
 # master.menu.employer ########################################################
 
 master.menu.employer = Empleado
 master.menu.employer.job.listMine = Listar mis trabajos
+
 
 
 # master.menu.user-account ####################################################
