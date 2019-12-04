@@ -20,7 +20,7 @@ employer.job.form.label.finalMode = Final Mode:
 employer.job.form.label.status = Status:
 
 employer.job.form.button.return= Return
-
+employer.job.form.button.duties= Duties
 
 employer.job.list.label.reference= Reference
 employer.job.list.label.deadline= Deadline
@@ -29,3 +29,4 @@ employer.job.list.label.salary= Salary:
 employer.job.list.label.moreInfo= More Information:
 employer.job.list.label.finalMode= Final Mode:
 employer.job.list.label.status= Status:
+

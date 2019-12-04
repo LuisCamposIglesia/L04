@@ -21,9 +21,18 @@
 	<acme:form-moment code="employer.job.form.label.deadline" path="deadline" />
 	<acme:form-money code="employer.job.form.label.salary" path="salary" />
 	<acme:form-url code="employer.job.form.label.moreInfo" path="moreInfo" />
-	
 	<acme:form-textbox code="employer.job.form.label.finalMode" path="finalMode" />
 	<acme:form-textbox code="employer.job.form.label.status" path="status" />
+	<acme:form-textbox code="employer.job.form.label.active" path="active" />
+	<acme:form-textarea code="employer.job.form.label.description" path="descriptor.description" />
+	
+	<button type="button" onclick="javascript: clearReturnUrl(); redirect('/employer/duty/list-mine?id=${descriptor.id}')"
+            class="btn btn-default">
+            <acme:message code="employer.job.form.button.duties"/>
+    </button>
+    
+	
+	
 	
 	<acme:form-return code="employer.job.form.button.return" />
 </acme:form>

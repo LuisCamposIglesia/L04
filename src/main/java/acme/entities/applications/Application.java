@@ -12,9 +12,11 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
+import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 
+import acme.entities.jobs.Job;
 import acme.entities.roles.Worker;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -31,6 +33,7 @@ public class Application extends DomainEntity {
 	@Column(unique = true)
 	@NotBlank
 	@Length(min = 5, max = 15)
+	@Pattern(regexp = "W\\d{3}\\-\\d{4}")
 	private String				referenceNumber;
 
 	@Temporal(TemporalType.TIMESTAMP)
@@ -54,16 +57,9 @@ public class Application extends DomainEntity {
 	@ManyToOne(optional = false)
 	private Worker				worker;
 
-	// ¡¡¡IMPORTANTE COMPLETAR!!!
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Job					job;
 
-	/*
-	 * @NotNull
-	 *
-	 * @Valid
-	 *
-	 * @ManyToOne(optional = false)
-	 */
-	// private Job job;
-
-	// ¡¡¡IMPORTANTE COMPLETAR!!!
 }

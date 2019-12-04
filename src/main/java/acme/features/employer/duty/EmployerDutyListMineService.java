@@ -10,56 +10,53 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.worker.application;
+package acme.features.employer.duty;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.applications.Application;
-import acme.entities.roles.Worker;
+import acme.entities.jobs.Duty;
+import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class WorkerApplicationListMineService implements AbstractListService<Worker, Application> {
+public class EmployerDutyListMineService implements AbstractListService<Employer, Duty> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	WorkerApplicationRepository repository;
+	EmployerDutyRepository repository;
 
 	// AbstractCreateService<Authenticated, Consumer> ---------------------------
 
 
 	@Override
-	public boolean authorise(final Request<Application> request) {
+	public boolean authorise(final Request<Duty> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public void unbind(final Request<Application> request, final Application entity, final Model model) {
+	public void unbind(final Request<Duty> request, final Duty entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "referenceNumber", "creationMoment", "status");
+		request.unbind(entity, model, "title", "description", "percentage");
 	}
 
 	@Override
-	public Collection<Application> findMany(final Request<Application> request) {
+	public Collection<Duty> findMany(final Request<Duty> request) {
 		assert request != null;
 
-		Collection<Application> result;
-		Principal principal;
+		Collection<Duty> result;
 
-		principal = request.getPrincipal();
-		result = this.repository.findManyByWorkerId(principal.getActiveRoleId());
+		result = this.repository.findManyDutiesByDescriptorId(request.getModel().getInteger("id"));
 
 		return result;
 	}

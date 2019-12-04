@@ -102,6 +102,8 @@
 			<acme:menu-suboption code="master.menu.consumer.offer" action="/authenticated/offer/list" />
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.consumer.challenges" action="/authenticated/challenges/list" />
+			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.authenticated.jobs" action="/authenticated/job/list" />
 			
 			
 		</acme:menu-option>

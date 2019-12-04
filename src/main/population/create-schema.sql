@@ -32,6 +32,7 @@
         `some_skills` varchar(255),
         `statement` varchar(255),
         `status` integer,
+        `job_id` integer not null,
         `worker_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -129,6 +130,7 @@
     create table `job` (
        `id` integer not null,
         `version` integer not null,
+        `active` bit not null,
         `deadline` datetime(6),
         `final_mode` bit not null,
         `more_info` varchar(255),
@@ -205,13 +207,11 @@
 
     insert into `hibernate_sequence` values ( 1 );
 
-
     alter table `application` 
        add constraint UK_rf84q38qr35ymh5nn0dcxfdue unique (`reference_number`);
 
     alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
-
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
@@ -225,6 +225,11 @@
        add constraint FK_6lnbc6fo3om54vugoh8icg78m 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `application` 
+       add constraint `FKoa6p4s2oyy7tf80xwc4r04vh6` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
 
     alter table `application` 
        add constraint `FKmbjdoxi3o93agxosoate4sxbt` 

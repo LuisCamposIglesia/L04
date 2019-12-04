@@ -84,6 +84,9 @@ master.menu.worker.applications.list = Listar Aplicaciones
 master.menu.employer = Empleado
 master.menu.employer.job.listMine = Listar mis trabajos
 
+# master.menu.authenticated ##################################################
+
+master.menu.authenticated.jobs= Listar trabajos activos
 
 
 # master.menu.user-account ####################################################

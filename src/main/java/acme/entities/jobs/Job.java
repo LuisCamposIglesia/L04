@@ -11,6 +11,7 @@ import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -31,7 +32,7 @@ public class Job extends DomainEntity {
 	@Column(unique = true)
 	@NotBlank
 	@Length(min = 5, max = 10)
-	//	@Pattern(regexp = "\\w{4}\\-\\d{4}")
+	@Pattern(regexp = "E\\d{3}\\-\\d{4}")
 	private String				reference;
 
 	@NotBlank
@@ -52,6 +53,9 @@ public class Job extends DomainEntity {
 
 	@NotNull
 	private Status				status;
+
+	@NotNull
+	private boolean				active;
 
 	//	private boolean				active;
 
