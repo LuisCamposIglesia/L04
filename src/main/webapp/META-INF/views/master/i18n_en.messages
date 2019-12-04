@@ -91,6 +91,11 @@ master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.investor= List Investors
 
 
+# master.menu.employer ########################################################
+
+master.menu.employer = Employer
+master.menu.employer.job.listMine = List my jobs
+
 # master.footer ###############################################################
 
 master.footer.title.about = About us

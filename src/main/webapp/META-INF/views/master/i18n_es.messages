@@ -73,10 +73,17 @@ master.menu.consumer.offer = Listar Ofertas
 master.menu.consumer.challenges= Listar Desafios
 master.menu.consumer.offer.create = Crear Oferta
 
+
 # master.menu.worker ##########################################################
 
 master.menu.worker = Trabajador
 master.menu.worker.applications.list = Listar Aplicaciones
+
+# master.menu.employer ########################################################
+
+master.menu.employer = Empleado
+master.menu.employer.job.listMine = Listar mis trabajos
+
 
 
 # master.menu.user-account ####################################################
@@ -107,7 +114,7 @@ master.company.text = \
 	Team Master Project, Inc. es una compañía fictícia que proporciona un proyecto \
 	team master plantilla para los estudiantes de la asignatura Diseño y Pruebas, en el Grado \
 	en Ingeniería del Software de la Universidad de Sevilla.
-master.company.name = Starter Project, Inc.
+master.company.name = Team Master Project, Inc.
 master.company.address = Av. Reina Mercedes
 master.company.phone = +000 123 456
 master.company.email = teammasterpldh@gmail.com
